@@ -1,0 +1,99 @@
+
+        /* Liquid Background Animations */
+        body { 
+            background-color: #050510; 
+            color: #e2e8f0; 
+            overflow-x: hidden;
+        }
+        
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        /* Nav Container */
+        .glass-nav-container {
+            background: rgba(15, 23, 42, 0.3);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2), inset 0 0 20px rgba(255, 255, 255, 0.03);
+        }
+
+        /* Nav Text Items */
+        .hyper-nav-item {
+            position: relative;
+            padding: 0.5rem 1rem;
+            color: #9ca3af;
+            font-weight: 500;
+            cursor: pointer;
+            z-index: 10;
+            transition: color 0.3s ease, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            display: inline-block;
+        }
+
+        .hyper-nav-item:hover {
+            color: #e5e7eb;
+        }
+
+        .hyper-nav-item.active {
+            color: #fff;
+        }
+
+        /* Tactile squish on click */
+        .hyper-nav-item:active {
+            transform: scale(0.8);
+        }
+
+        /* The Liquid Sliding Pill */
+        .liquid-pill {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1), inset 0 0 10px rgba(255,255,255,0.1);
+            border-radius: 9999px;
+            z-index: 0;
+            pointer-events: none;
+            /* Spring physics for sliding and width changing */
+            transition: transform 0.6s cubic-bezier(0.25, 1.2, 0.3, 1), 
+                        width 0.4s cubic-bezier(0.25, 1, 0.3, 1);
+            height: calc(100% - 8px);
+            top: 4px;
+        }
+
+        /* Liquid stretch effect while moving */
+        .liquid-pill.stretching {
+            width: calc(var(--target-width) + 20px) !important;
+            border-radius: 40px;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(59, 130, 246, 0.4);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), inset 0 0 20px rgba(59, 130, 246, 0.1);
+        }
+
+        /* Liquid Blob Background Animations */
+        @keyframes blob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(50px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+        .animate-blob { animation: blob 10s infinite alternate; }
+        .animation-delay-2000 { animation-delay: 2s; }
+        .animation-delay-4000 { animation-delay: 4s; }

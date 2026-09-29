@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyaw Bhone Aung - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="cssport.css">
+</head>
+<body class="antialiased selection:bg-cyan-500 selection:text-white relative">
+
+    <!-- Animated Liquid Background -->
+    <div class="fixed inset-0 w-full h-full z-[-1] overflow-hidden pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-blue-600 rounded-full mix-blend-screen filter blur-[100px] opacity-40 animate-blob"></div>
+        <div class="absolute top-[20%] right-[-5%] w-[30rem] h-[30rem] bg-cyan-500 rounded-full mix-blend-screen filter blur-[120px] opacity-30 animate-blob animation-delay-2000"></div>
+        <div class="absolute bottom-[-10%] left-[20%] w-[25rem] h-[25rem] bg-purple-600 rounded-full mix-blend-screen filter blur-[100px] opacity-40 animate-blob animation-delay-4000"></div>
+    </div>
+
+    <!-- Floating Glass Navigation -->
+    <div class="fixed w-full z-50 top-6 px-4 flex justify-center">
+        <nav class="glass-nav-container rounded-full px-4 py-2 flex items-center justify-between w-full max-w-4xl mx-auto relative">
+            <a href="#" class="text-xl font-bold text-white tracking-wider flex items-center gap-2 mr-4 ml-2 z-10">
+                <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-cyan-400 to-blue-600 flex items-center justify-center text-sm shadow-[0_0_15px_rgba(34,211,238,0.5)] text-white">K</div>
+                <span class="hidden sm:block text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-500">Portfolio</span>
+            </a>
+            
+            <!-- Dynamic Navigation Links Wrapper -->
+            <div class="nav-links-wrapper relative flex items-center space-x-1 sm:space-x-2 text-xs sm:text-sm p-1 rounded-full">
+                <!-- The animated sliding pill -->
+                <div class="liquid-pill" id="liquidPill"></div>
+                
+                <a href="#about" class="hyper-nav-item active">About</a>
+                <a href="#skills" class="hyper-nav-item">Skills</a>
+                <a href="#experience" class="hyper-nav-item">Experience</a>
+                <a href="#projects" class="hyper-nav-item">Projects</a>
+                <a href="#education" class="hyper-nav-item">Education</a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Hero Section / About -->
+    <section id="about" class="pt-40 pb-20 md:pt-48 md:pb-28 min-h-screen flex items-center relative z-10">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-12 max-w-6xl mx-auto glass-panel p-8 md:p-12 rounded-[2.5rem]">
+                
+                <!-- Text Content -->
+                <div class="w-full md:w-3/5 text-center md:text-left">
+                    <div class="inline-block px-4 py-1.5 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 text-sm font-medium mb-6 backdrop-blur-md">
+                        <i class="fas fa-network-wired mr-2"></i> IT Professional
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
+                        Hi, I'm <br class="hidden md:block">
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">Kyaw Bhone Aung</span>
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl text-gray-300 mb-6 font-light">
+                        Network Administrator
+                    </h2>
+                    <p class="text-lg text-gray-400 mb-8 max-w-xl leading-relaxed">
+                        A motivated and passionate IT student with a strong interest in computer networking and network administration. I enjoy solving technical problems and learning new technologies.
+                    </p>
+                    
+                    <!-- Action Buttons -->
+                    <div class="flex flex-wrap items-center justify-center md:justify-start gap-4">
+                        <a href="Kyaw_Bhone_Aung_FlowCV_Done.pdf" download="Kyaw_Bhone_Aung_CV.pdf"
+                           class="relative overflow-hidden group bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3.5 rounded-full font-medium transition-all duration-300 flex items-center gap-2 shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:shadow-[0_0_30px_rgba(6,182,212,0.6)] hover:-translate-y-1">
+                            <span class="relative z-10 flex items-center gap-2"><i class="fas fa-download"></i> Download CV</span>
+                            <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out"></div>
+                        </a>
+                        
+                        <div class="flex gap-3 ml-2">
+                            <a href="https://t.me/spiritissleeping" target="_blank"
+                               class="glass-card w-12 h-12 rounded-full flex items-center justify-center text-white hover:text-[#0088cc]">
+                                <i class="fab fa-telegram-plane text-xl"></i>
+                            </a>
+                            <a href="https://discord.com/users/754967464604991538" target="_blank"
+                               class="glass-card w-12 h-12 rounded-full flex items-center justify-center text-white hover:text-[#5865F2]">
+                                <i class="fab fa-discord text-xl"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@kirito5232" target="_blank"
+                               class="glass-card w-12 h-12 rounded-full flex items-center justify-center text-white hover:text-[#FF0000]">
+                                <i class="fab fa-youtube text-xl"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/kyaw-bhone-aung-28559443b" target="_blank"
+                               class="glass-card w-12 h-12 rounded-full flex items-center justify-center text-white hover:text-[#0077b5]">
+                                <i class="fab fa-linkedin-in text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profile Image Content -->
+                <div class="w-full md:w-2/5 flex justify-center">
+                    <div class="relative group">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-cyan-400 to-purple-500 rounded-full blur-xl opacity-50 group-hover:opacity-70 transition-opacity duration-500 animate-pulse"></div>
+                        <img src="cvpf.jpg" alt="Kyaw Bhone Aung" 
+                             class="relative w-64 h-64 md:w-[320px] md:h-[320px] object-cover rounded-full border-[6px] border-white/10 shadow-2xl z-10 transition-transform duration-500 group-hover:scale-105">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info Glass Strip -->
+    <div class="container mx-auto px-6 mb-20 relative z-10">
+        <div class="glass-panel py-5 px-6 rounded-2xl flex flex-wrap justify-center gap-6 md:gap-12 text-sm md:text-base text-gray-300">
+            <div class="flex items-center gap-3 hover:text-cyan-400 transition-colors"><i class="fas fa-envelope p-2 bg-white/5 rounded-full"></i> kyawbhoneaung12345@gmail.com</div>
+            <div class="flex items-center gap-3 hover:text-cyan-400 transition-colors"><i class="fas fa-phone p-2 bg-white/5 rounded-full"></i> 09774012842</div>
+            <div class="flex items-center gap-3 hover:text-cyan-400 transition-colors"><i class="fas fa-map-marker-alt p-2 bg-white/5 rounded-full"></i> Waibargi, Yangon</div>
+        </div>
+    </div>
+
+    <!-- Career Objective Section -->
+    <div class="py-16 relative z-10">
+        <div class="container mx-auto px-6 max-w-4xl text-center">
+            <h3 class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400 mb-8 inline-block relative">
+                Career Objective
+                <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-1/2 h-1 bg-cyan-500 rounded-full blur-[2px]"></div>
+            </h3>
+            <p class="text-lg text-gray-300 leading-relaxed glass-panel p-8 rounded-3xl">
+                Aspiring Network Administrator with a strong interest in networking and IT infrastructure. Seeking opportunities to develop practical experience in network configuration, troubleshooting, security, and administration while continuously improving my technical skills.
+            </p>
+        </div>
+    </div>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 relative z-10">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h3 class="text-3xl font-bold text-white inline-block relative">
+                    Technical & Soft Skills
+                    <div class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"></div>
+                </h3>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                <div class="glass-card p-6 rounded-2xl text-center group">
+                    <div class="w-16 h-16 mx-auto bg-blue-500/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-network-wired text-3xl text-cyan-400"></i>
+                    </div>
+                    <p class="font-medium text-gray-200">Basic Network Concept</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl text-center group">
+                    <div class="w-16 h-16 mx-auto bg-blue-500/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-tools text-3xl text-cyan-400"></i>
+                    </div>
+                    <p class="font-medium text-gray-200">Network Troubleshooting</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl text-center group">
+                    <div class="w-16 h-16 mx-auto bg-blue-500/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-server text-3xl text-cyan-400"></i>
+                    </div>
+                    <p class="font-medium text-gray-200">IP Addressing & Subnetting</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl text-center group">
+                    <div class="w-16 h-16 mx-auto bg-blue-500/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-shield-alt text-3xl text-cyan-400"></i>
+                    </div>
+                    <p class="font-medium text-gray-200">Network Security</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl text-center group">
+                    <div class="w-16 h-16 mx-auto bg-blue-500/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-route text-3xl text-cyan-400"></i>
+                    </div>
+                    <p class="font-medium text-gray-200">Router & Switch Config</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl text-center group">
+                    <div class="w-16 h-16 mx-auto bg-blue-500/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-brain text-3xl text-cyan-400"></i>
+                    </div>
+                    <p class="font-medium text-gray-200">Problem-Solving</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl text-center group">
+                    <div class="w-16 h-16 mx-auto bg-blue-500/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-users text-3xl text-cyan-400"></i>
+                    </div>
+                    <p class="font-medium text-gray-200">Teamwork</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl text-center group">
+                    <div class="w-16 h-16 mx-auto bg-blue-500/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-bolt text-3xl text-cyan-400"></i>
+                    </div>
+                    <p class="font-medium text-gray-200">Fast Learning</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 relative z-10">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h3 class="text-3xl font-bold text-white mb-12 text-center">Professional Experience</h3>
+            <div class="space-y-6 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-cyan-500/50 before:to-transparent">
+                
+                <!-- Experience Item -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-[#050510] bg-cyan-500 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 relative z-10">
+                        <i class="fas fa-code text-xs"></i>
+                    </div>
+                    <div class="glass-card w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-2xl">
+                        <div class="flex flex-col mb-2">
+                            <span class="text-cyan-400 text-sm font-bold tracking-wider mb-1">03/2026 - 05/2026 | Yangon</span>
+                            <h4 class="text-xl font-bold text-white">Website Developing</h4>
+                        </div>
+                        <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm md:text-base">
+                            <li>Website testing and Creating.</li>
+                            <li>Good Teamwork and communication.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience Item -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-[#050510] bg-blue-500 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 relative z-10">
+                        <i class="fas fa-mobile-alt text-xs"></i>
+                    </div>
+                    <div class="glass-card w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-2xl">
+                        <div class="flex flex-col mb-2">
+                            <span class="text-blue-400 text-sm font-bold tracking-wider mb-1">2025 - 10/2025 | Yangon</span>
+                            <h4 class="text-xl font-bold text-white">Phone & Hardware Support</h4>
+                        </div>
+                        <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm md:text-base">
+                            <li>Troubleshooting phone & hardware issues.</li>
+                            <li>Device setup and basic maintenance.</li>
+                            <li>Providing technical assistance & user support.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience Item -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-[#050510] bg-purple-500 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 relative z-10">
+                        <i class="fas fa-gamepad text-xs"></i>
+                    </div>
+                    <div class="glass-card w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-2xl">
+                        <div class="flex flex-col mb-2">
+                            <span class="text-purple-400 text-sm font-bold tracking-wider mb-1">12/2023 - 06/2024 | Nay Pyi Taw</span>
+                            <h4 class="text-xl font-bold text-white">Game Account Reseller</h4>
+                        </div>
+                        <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm md:text-base">
+                            <li>Managed online buying/selling of accounts.</li>
+                            <li>Handled customer inquiries and negotiations.</li>
+                            <li>Maintained transactions and after-sales support.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 relative z-10">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <h3 class="text-3xl font-bold text-white mb-12 text-center">Projects</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Project 1 -->
+                <div class="glass-card rounded-3xl p-8 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/20 rounded-bl-full -z-10 group-hover:scale-110 transition-transform"></div>
+                    <div class="inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-xs font-bold rounded-full border border-blue-500/30 mb-4">March 3, 2026 - May 25, 2026</div>
+                    <h4 class="text-2xl font-bold text-white mb-3">Bag Collection Store</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Creating a database site which includes Admin, Cashier, and Customer views. Admin/Cashier manage data, and Customers view prices and stock.
+                    </p>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="glass-card rounded-3xl p-8 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-green-500/20 rounded-bl-full -z-10 group-hover:scale-110 transition-transform"></div>
+                    <div class="inline-block px-3 py-1 bg-green-500/20 text-green-300 text-xs font-bold rounded-full border border-green-500/30 mb-4">November 27, 2025 - Feburary 24, 2026</div>
+                    <h4 class="text-2xl font-bold text-white mb-3">Environmental Awareness</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Creating a website by using HTML, CSS, and JavaScript. The website focuses on Environmental Status and Awareness in Myanmar.
+                    </p>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="glass-card rounded-3xl p-8 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-red-500/20 rounded-bl-full -z-10 group-hover:scale-110 transition-transform"></div>
+                    <div class="inline-block px-3 py-1 bg-red-500/20 text-red-300 text-xs font-bold rounded-full border border-red-500/30 mb-4">June 1, 2026 - Aug 4, 2026</div>
+                    <h4 class="text-2xl font-bold text-white mb-3">Online Medicine Sales Management System</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Creating a medical store system using Java, including Admin and Customer interfaces. Admins manage order history; customers can view and order.
+                    </p>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="glass-card rounded-3xl p-8 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-yellow-500/20 rounded-bl-full -z-10 group-hover:scale-110 transition-transform"></div>
+                    <div class="inline-block px-3 py-1 bg-yellow-500/20 text-yellow-300 text-xs font-bold rounded-full border border-yellow-500/30 mb-4">Aug 12, 2026 - Oct 18, 2026</div>
+                    <h4 class="text-2xl font-bold text-white mb-3">Smart Automatic Night Lamp System</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Served as Technical Coordinator within a team (Teamwork). Collaborated effectively to build and implement the SANLS project.
+                    </p>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="glass-card rounded-3xl p-8 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-purple-500/20 rounded-bl-full -z-10 group-hover:scale-110 transition-transform"></div>
+                    <div class="inline-block px-3 py-1 bg-indigo-500/20 text-indigo-300 text-xs font-bold rounded-full border border-indigo-500/30 mb-4">Mar 3, 2026 - May 25, 2026</div>
+                    <h4 class="text-2xl font-bold text-white mb-3">Secure LAN for Global Future Institute</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Worked as a Network Administrator to design and implement a Secure LAN network. Contributed to creating the best network design with optimal security measures.
+                    </p>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="glass-card rounded-3xl p-8 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-teal-500/20 rounded-bl-full -z-10 group-hover:scale-110 transition-transform"></div>
+                    <div class="inline-block px-3 py-1 bg-teal-500/20 text-teal-300 text-xs font-bold rounded-full border border-teal-500/30 mb-4">Jun 1, 2026 - Aug 3, 2026</div>
+                    <h4 class="text-2xl font-bold text-white mb-3">SOHO System for Agga Air Ticket</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Participated as an IT Support Member for the design and implementation of a SOHO computer system and network. Carefully installed systems and performed thorough troubleshooting for errors.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certificates -->
+    <section id="education" class="py-20 relative z-10">
+        <div class="container mx-auto px-6 max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-12">
+            
+            <!-- Education -->
+            <div class="glass-panel p-8 rounded-3xl">
+                <h3 class="text-2xl font-bold text-white mb-8 flex items-center gap-3">
+                    <i class="fas fa-graduation-cap text-cyan-400"></i> Education
+                </h3>
+                <div class="space-y-6">
+                    <div class="glass-card p-5 rounded-2xl">
+                        <h4 class="text-xl font-bold text-white">HNC</h4>
+                        <p class="text-cyan-400 font-medium mb-1 mt-1">Info Myanmar College</p>
+                        <div class="flex justify-between items-center text-sm text-gray-400">
+                            <span>11/2025 - 2026</span>
+                            <span>Hledan, Yangon</span>
+                        </div>
+                    </div>
+                    <div class="glass-card p-5 rounded-2xl">
+                        <h4 class="text-xl font-bold text-white">Grade 12</h4>
+                        <p class="text-cyan-400 font-medium mb-1 mt-1">BEHS (7)</p>
+                        <div class="flex justify-between items-center text-sm text-gray-400">
+                            <span>06/2024 - 03/2025</span>
+                            <span>North Okkalapa, Yangon</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Languages -->
+                <h3 class="text-xl font-bold text-white mt-10 mb-6 flex items-center gap-3">
+                    <i class="fas fa-language text-cyan-400"></i> Languages
+                </h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="glass-card px-4 py-2 rounded-full text-sm text-white font-medium">Burmese (Native)</span>
+                    <span class="glass-card px-4 py-2 rounded-full text-sm text-white font-medium">English (Intermediate)</span>
+                    <span class="glass-card px-4 py-2 rounded-full text-sm text-white font-medium">Japan (Basic)</span>
+                </div>
+            </div>
+
+            <!-- Certificates -->
+            <div class="glass-panel p-8 rounded-3xl">
+                <h3 class="text-2xl font-bold text-white mb-8 flex items-center gap-3">
+                    <i class="fas fa-certificate text-blue-400"></i> Certificates
+                </h3>
+                <div class="space-y-4">
+                    <div class="glass-card p-4 rounded-2xl flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 shrink-0">
+                            <i class="fas fa-award text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold">Certificate of High School Completion</h4>
+                        </div>
+                    </div>
+                    <div class="glass-card p-4 rounded-2xl flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-cyan-500/20 flex items-center justify-center text-cyan-400 shrink-0">
+                            <i class="fas fa-network-wired text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold">Certificate of Network Cabling</h4>
+                        </div>
+                    </div>
+                    <div class="glass-card p-4 rounded-2xl flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 shrink-0">
+                            <i class="fas fa-desktop text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold">Competence in Basic Computer Applications</h4>
+                            <p class="text-gray-400 text-sm mt-1">KMD College</p>
+                        </div>
+                    </div>
+                    <div class="glass-card p-4 rounded-2xl flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-pink-500/20 flex items-center justify-center text-pink-400 shrink-0">
+                            <i class="fas fa-laptop-code text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold">Certificate of IT in Foundation</h4>
+                            <p class="text-gray-400 text-sm mt-1">Info Myanmar College</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- References & Footer -->
+    <footer class="pt-16 pb-8 relative z-10 border-t border-white/10 mt-10 bg-black/20 backdrop-blur-md">
+        <div class="container mx-auto px-6 max-w-5xl text-center mb-12">
+            <h3 class="text-2xl font-bold text-white mb-10">References</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+                
+                <!-- Reference 1 -->
+                <div class="glass-card p-6 rounded-2xl text-center md:text-left group">
+                    <img src="teacher1.jpg" alt="Daw Thu Thu Zan" 
+                         class="w-16 h-16 mx-auto md:mx-0 rounded-full object-cover border-2 border-cyan-400/50 mb-4 shadow-[0_0_15px_rgba(34,211,238,0.2)] group-hover:scale-110 transition-transform duration-300">
+                    <h4 class="text-white font-bold text-lg">Daw Thu Thu Zan</h4>
+                    <p class="text-gray-400 text-sm mb-3">IT Software Teacher</p>
+                    <a href="mailto:thuthuzan67@gmail.com" class="text-cyan-400 text-sm hover:text-white transition-colors block mb-1">thuthuzan67@gmail.com</a>
+                    <span class="text-gray-300 text-sm">09-123456789</span>
+                </div>
+                
+                <!-- Reference 2 -->
+                <div class="glass-card p-6 rounded-2xl text-center md:text-left group">
+                    <img src="teacher2.jpg" alt="Daw Myat Cho Mon Oo" 
+                         class="w-16 h-16 mx-auto md:mx-0 rounded-full object-cover border-2 border-cyan-400/50 mb-4 shadow-[0_0_15px_rgba(34,211,238,0.2)] group-hover:scale-110 transition-transform duration-300">
+                    <h4 class="text-white font-bold text-lg">Daw Myat Cho Mon Oo</h4>
+                    <p class="text-gray-400 text-sm mb-3">IT Software Teacher</p>
+                    <a href="mailto:myatcho856@gmail.com" class="text-cyan-400 text-sm hover:text-white transition-colors block mb-1">myatcho856@gmail.com</a>
+                    <span class="text-gray-300 text-sm">09-123456789</span>
+                </div>
+                
+                <!-- Reference 3 -->
+                <div class="glass-card p-6 rounded-2xl text-center md:text-left group">
+                    <img src="kogyi.jpg" alt="Toe Wai Hlaing" 
+                         class="w-16 h-16 mx-auto md:mx-0 rounded-full object-cover border-2 border-cyan-400/50 mb-4 shadow-[0_0_15px_rgba(34,211,238,0.2)] group-hover:scale-110 transition-transform duration-300">
+                    <h4 class="text-white font-bold text-lg">Toe Wai Hlaing</h4>
+                    <p class="text-gray-400 text-sm mb-3">IT Networking Teacher</p>
+                    <a href="mailto:hlaingtoewai9@gmail.com" class="text-cyan-400 text-sm hover:text-white transition-colors block mb-1">hlaingtoewai9@gmail.com</a>
+                    <span class="text-gray-300 text-sm">09-964589984</span>
+                </div>
+                
+            </div>
+        </div>
+        <div class="text-center text-gray-500 text-sm">
+            <p>&copy; 2026 Kyaw Bhone Aung. Built with Tailwind CSS & Glassmorphism.</p>
+        </div>
+        <script src="jvsc.js"></script>
+    </footer>
+</body>
+</html>
